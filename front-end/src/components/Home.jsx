@@ -4,8 +4,10 @@ import bgImage from "../assets/bg.jpg";
 const Home = () => {
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="relative w-full h-screen bg-cover bg-center pt-10" 
+      style={{ backgroundImage: `url(${bgImage}`,
+      backgroundPosition: "center 30%"  
+    }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 text-center text-white flex flex-col justify-center items-center h-full px-4">
