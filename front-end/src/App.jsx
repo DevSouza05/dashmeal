@@ -1,18 +1,12 @@
-import "./App.css";
-
-import Header from "./components/Header.jsx";
-import Home from "./components/Home.jsx";
-import Testimonials from "./components/Testimonials.jsx";
-import Footer from "./components/Footer.jsx";
+import "./App.css";;
+import PageHome from "./pages/PageHome.jsx"
 
 function App() {
   return (
     <>
       <main className="h-screen w-screen relative">
-        <Header />
-        <Home />
-        <Testimonials/>
-        <Footer/>
+        <PageHome/>
+       
       </main>
     </>
   );
