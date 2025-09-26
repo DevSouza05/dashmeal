@@ -1,20 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Header from "./components/Header.jsx";
-import Home from "./components/Home.jsx";
-import Testimonials from "./components/Testimonials.jsx";
 import Footer from "./components/Footer.jsx";
+import HomePage from "./pages/Home.jsx";
+import MenuPage from "./pages/MenuPage.jsx"; // Importa a nova página
 
 function App() {
   return (
-    <>
-      <main className="h-screen w-screen relative">
+    <Router>
+      <main className="flex flex-col min-h-screen bg-white">
         <Header />
-        <Home />
-        <Testimonials/>
-        <Footer/>
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cardapio" element={<MenuPage />} />
+          </Routes>
+        </div>
+        <Footer />
       </main>
-    </>
+    </Router>
   );
 }
 
