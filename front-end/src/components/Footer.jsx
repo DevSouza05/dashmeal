@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,6 +10,7 @@ const Footer = () => {
           <a href="#" className="text-white hover:text-[#f3a282] transition duration-300">Facebook</a>
           <a href="#" className="text-white hover:text-[#f3a282] transition duration-300">Instagram</a>
           <a href="#" className="text-white hover:text-[#f3a282] transition duration-300">Twitter</a>
+          <Link to="/admin" className="text-white hover:text-[#f3a282] transition duration-300">Admin</Link>
         </div>
       </div>
     </footer>

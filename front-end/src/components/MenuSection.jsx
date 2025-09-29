@@ -10,7 +10,7 @@ const MenuSection = ({ title, items }) => {
       <div>
         {items.map((item, index) => (
           <MenuItem
-            key={index}
+            key={item.id}
             name={item.name}
             description={item.description}
             price={item.price}
