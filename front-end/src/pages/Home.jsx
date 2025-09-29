@@ -1,6 +1,7 @@
 import React from "react";
-import bgImage from "../assets/bg.jpg";
+import { Link } from "react-router-dom";
 import Testimonials from "../components/Testimonials";
+import PromotionCarousel from "../components/PromotionCarousel";
 
 const HomePage = () => {
   return (
@@ -8,11 +9,11 @@ const HomePage = () => {
       <section
         className="relative w-full h-screen bg-cover bg-center pt-10"
         style={{
-          backgroundImage: `url(${bgImage}`,
-          backgroundPosition: "center 30%",
+          backgroundImage: `url(https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
+          backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 text-center text-white flex flex-col justify-center items-center h-full px-4">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-4">
             Sabor que Vicia!
@@ -21,14 +22,15 @@ const HomePage = () => {
             O melhor hambúrguer da cidade, feito com ingredientes frescos e muito
             amor.
           </p>
-          <a
-            href="#menu"
+          <Link
+            to="/cardapio"
             className="bg-[#FF7514] text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#f3a282] transition duration-300"
           >
             Veja o Menu
-          </a>
+          </Link>
         </div>
       </section>
+      <PromotionCarousel />
       <Testimonials />
     </>
   );
