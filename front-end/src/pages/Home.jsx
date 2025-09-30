@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Testimonials from "../components/Testimonials";
 import PromotionCarousel from "../components/PromotionCarousel";
+import BestRestaurants from "../components/BestRestaurants";
 
 const HomePage = () => {
   return (
@@ -31,6 +32,7 @@ const HomePage = () => {
         </div>
       </section>
       <PromotionCarousel />
+      <BestRestaurants />
       <Testimonials />
     </>
   );

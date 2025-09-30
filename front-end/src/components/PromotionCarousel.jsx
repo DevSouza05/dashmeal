@@ -27,6 +27,19 @@ const promotions = [
 const PromotionCarousel = () => {
   return (
     <section className="py-12 bg-gray-50">
+      <style>
+        {`
+          .carousel-image {
+            height: 256px; /* Altura padrão para dispositivos móveis */
+          }
+
+          @media (min-width: 768px) {
+            .carousel-image {
+              height: 400px; /* Altura para desktops */
+            }
+          }
+        `}
+      </style>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Destaques e Promoções</h2>
         <Swiper
@@ -45,7 +58,7 @@ const PromotionCarousel = () => {
           {promotions.map((promo, index) => (
             <SwiperSlide key={index} className="text-center p-4">
               <div className="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src={promo.image} alt={promo.title} className="w-full h-64 object-cover" />
+                <img src={promo.image} alt={promo.title} className="w-full object-cover carousel-image" />
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold text-gray-700">{promo.title}</h3>
                   <p className="text-gray-600 mt-2">{promo.description}</p>
